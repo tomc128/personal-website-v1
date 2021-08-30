@@ -5,62 +5,47 @@ section {
     flex-direction: column;
     align-items: center;
 
+    @include phone {
+        padding: 0 1rem;
+    }
+
+    @include desktop {
+        padding: 0 5rem;
+    }
+
+    .divider {
+        display: block;
+        width: 100%;
+    }
+
     &#hero {
         height: 100vh;
+
+        background-color: #fcfcfc;
         justify-content: center;
 
-        background-color: #f0f0f0;
-
-        @include phone {
-            align-items: center;
-
-            .profile-pic {
-                max-width: 25rem;
-                width: 100%;
-
-                opacity: 50%;
-            }
-
-            .content {
-            }
-        }
-        @include desktop {
-            align-items: flex-start;
-
-            .profile-pic {
-                position: absolute;
+        .left {
+            img {
                 width: 25rem;
-                margin-left: 5rem;
+                margin-bottom: 2rem;
+
+                border-radius: 54% 46% 48% 52% / 62% 38% 62% 38%;
+                box-shadow: 0 4.5px 3.6px rgba(0, 0, 0, 0.052), 0 12.5px 10px rgba(0, 0, 0, 0.075),
+                    0 30.1px 24.1px rgba(0, 0, 0, 0.098), 0 100px 80px rgba(0, 0, 0, 0.15);
             }
-
-            .content {
-                min-width: unquote("max(30rem, calc(100% - 30rem))");
-                padding-left: 5rem;
+        }
+        .right {
+            text-align: center;
+            
+            h1 {
+                font-size: 4rem;
             }
-        }
-
-        * {
-            z-index: 20;
-        }
-
-        .content {
-            display: flex;
-            flex-direction: inherit;
-            align-items: inherit;
-        }
-
-        .profile-pic {
-            position: absolute;
-            z-index: 10;
-
-            border-radius: 54% 46% 48% 52% / 62% 38% 62% 38%;
-            box-shadow: 0 4.5px 3.6px rgba(0, 0, 0, 0.052), 0 12.5px 10px rgba(0, 0, 0, 0.075),
-                0 30.1px 24.1px rgba(0, 0, 0, 0.098), 0 100px 80px rgba(0, 0, 0, 0.15);
         }
     }
 
     &#about {
         height: 50vh;
+        padding-top: 150px; // Divider padding
 
         background-color: #ebebeb;
     }
