@@ -36,7 +36,7 @@ section {
         }
         .right {
             text-align: center;
-            
+
             h1 {
                 font-size: 4rem;
             }
@@ -45,9 +45,20 @@ section {
 
     &#about {
         height: 50vh;
-        padding-top: 150px; // Divider padding
+        padding-top: 200px; // Divider padding
+        padding-bottom: 350px; // Divider padding
 
-        background-color: #ebebeb;
+        color: white;
+        background: linear-gradient(to right, #f957b0, #eb7d0e);
+
+        > .wave-divider {
+            &.top .shape-fill {
+                fill: #fcfcfc;
+            }
+            &.bottom .shape-fill {
+                fill: #e0e0e0;
+            }
+        }
     }
 
     &#skills {

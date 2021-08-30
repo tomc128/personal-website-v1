@@ -1,20 +1,24 @@
 // Waves 1
-.custom-shape-divider-top-1630354010 {
+.wave-divider {
     position: absolute;
-    top: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
-}
 
-.custom-shape-divider-top-1630354010 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
-}
+    &.top {
+        top: 0;
+    }
 
-.custom-shape-divider-top-1630354010 .shape-fill {
-    fill: #FCFCFC;
+    &.bottom {
+        bottom: 0;
+        transform: rotate(180deg);
+    }
+
+    svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 150px;
+    }
 }
