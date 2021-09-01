@@ -40,11 +40,15 @@ section {
                 border-radius: 54% 46% 48% 52% / 62% 38% 62% 38%;
             }
 
-            .text {
+            .info {
                 padding: 2rem;
 
                 h1 {
                     font-size: 4rem;
+                }
+
+                .action {
+                    margin-top: 2.5rem;
                 }
             }
 
