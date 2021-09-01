@@ -1,0 +1,14 @@
+@mixin centred-flex($direction) {
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+
+    @if $direction == horizontal {
+        flex-direction: row;
+    }
+    @else {
+        flex-direction: column;
+
+    }
+}
