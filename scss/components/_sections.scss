@@ -34,7 +34,9 @@ section {
                 max-height: 40vh;
                 max-width: 40vh;
                 width: 80%;
-
+                
+                box-shadow: 0 4.5px 3.6px rgba(0, 0, 0, 0.052), 0 12.5px 10px rgba(0, 0, 0, 0.075),
+                    0 30.1px 24.1px rgba(0, 0, 0, 0.098), 0 100px 80px rgba(0, 0, 0, 0.15);
                 border-radius: 54% 46% 48% 52% / 62% 38% 62% 38%;
             }
 
