@@ -20,11 +20,11 @@
         height: 100%;
 
         @include phone {
-            padding: 2rem 1rem;
+            padding: 5rem 1rem;
         }
 
         @include desktop {
-            padding: 2rem 5%;
+            padding: 5rem 5%;
         }
 
         @include centred-flex(vertical);
@@ -36,11 +36,17 @@
 .section-card#skills {
     > .content {
         .responsive-grid {
-            margin-top: 4rem;
+            margin-top: 1rem;
             height: 100%;
 
             .item {
-                padding: 0 1rem;
+                @include phone {
+                    padding: 5rem 1rem;
+                }
+        
+                @include desktop {
+                    padding: 5rem 3rem;
+                }
 
                 .iconify {
                     &.item-icon {
@@ -48,7 +54,8 @@
                     }
 
                     &.tech-icon {
-                        font-size: 1.5rem;
+                        font-size: 2rem;
+                        margin-right: 0.5rem;
                     }
                 }
 

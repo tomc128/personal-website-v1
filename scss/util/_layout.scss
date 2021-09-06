@@ -18,6 +18,11 @@
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 1px;
 
+    // > * {
+    //     border-top: 1px solid $darkDivider;
+    //     border-left: 1px solid $darkDivider;
+    // }
+
     background-color: $darkDivider;
 
     > * {
