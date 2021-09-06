@@ -24,3 +24,9 @@
         background-color: white;
     }
 }
+
+@for $i from 1 through 10 {
+    .spacer-#{$i} {
+        height: #{$i}rem;
+    }
+}

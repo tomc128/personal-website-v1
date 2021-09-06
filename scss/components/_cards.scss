@@ -17,7 +17,7 @@
 
     > .content {
         position: relative;
-        // width: 100%;
+        height: 100%;
 
         @include phone {
             padding: 2rem 1rem;
@@ -30,15 +30,30 @@
         @include centred-flex(vertical);
 
         text-align: center;
+    }
+}
 
-        &#skills-card-content {
-            .responsive-grid {
+.section-card#skills {
+    > .content {
+        .responsive-grid {
+            margin-top: 4rem;
+            height: 100%;
+
+            .item {
+                padding: 0 1rem;
+
                 .iconify {
-                    font-size: 5rem;
+                    &.item-icon {
+                        font-size: 5rem;
+                    }
+
+                    &.tech-icon {
+                        font-size: 1.5rem;
+                    }
                 }
 
                 ul {
-                    // list-style: none;
+                    list-style: none;
                     text-align: left;
                 }
             }
