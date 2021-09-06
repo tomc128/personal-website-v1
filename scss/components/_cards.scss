@@ -1,0 +1,47 @@
+.card {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+    border-radius: 1rem;
+}
+
+.section-card {
+    position: absolute;
+    width: 80%;
+    min-height: 40rem;
+    top: 0;
+    z-index: 10;
+    margin-top: 10rem;
+
+    color: $darkText;
+
+    > .content {
+        position: relative;
+        // width: 100%;
+
+        @include phone {
+            padding: 2rem 1rem;
+        }
+
+        @include desktop {
+            padding: 2rem 5%;
+        }
+
+        @include centred-flex(vertical);
+
+        text-align: center;
+
+        &#skills-card-content {
+            .responsive-grid {
+                .iconify {
+                    font-size: 5rem;
+                }
+
+                ul {
+                    // list-style: none;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

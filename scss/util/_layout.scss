@@ -1,0 +1,26 @@
+.positioned {
+    position: relative;
+    display: block;
+    height: 0;
+
+    &.wide {
+        width: 100%;
+    }
+
+    &.centred {
+        @include centred-flex(horizontal);
+    }
+}
+
+.responsive-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1px;
+
+    background-color: $darkDivider;
+
+    > * {
+        background-color: white;
+    }
+}

@@ -4,7 +4,7 @@ section {
 
     @include centred-flex(vertical);
 
-    .content {
+    >.content {
         max-width: 120rem;
         width: 100vw;
 
@@ -29,7 +29,7 @@ section {
 
         background-color: #fcfcfc;
 
-        .content {
+        >.content {
             img {
                 max-height: 40vh;
                 max-width: 40vh;
@@ -69,7 +69,7 @@ section {
         padding-top: 200px; // Divider padding
         padding-bottom: 350px; // Divider padding
 
-        color: white;
+        color: $lightText;
         background: linear-gradient(to right, #f957b0, #eb7d0e);
 
         > .wave-divider {
