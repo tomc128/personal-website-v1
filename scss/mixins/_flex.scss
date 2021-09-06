@@ -1,14 +1,8 @@
-@mixin centred-flex($direction) {
+@mixin centred-flex($direction, $mainCentre: true, $crossCentre: true) {
     display: flex;
     
-    align-items: center;
-    justify-content: center;
+    align-items: if($mainCentre == true, center, flex-start);
+    justify-content: if($crossCentre == true, center, flex-start);
 
-    @if $direction == horizontal {
-        flex-direction: row;
-    }
-    @else {
-        flex-direction: column;
-
-    }
+    flex-direction: if($direction == horizontal, row, column);
 }

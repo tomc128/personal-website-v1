@@ -114,8 +114,40 @@
         <div class="content">
             <h1>Projects</h1>
             <p>Check out some of my recent projects</p>
+
+            <div class="responsive-grid">
+                <div class="item">
+                    <div class="project-item">
+                        <img class="background" src="./img/profile-pic.jpg" alt="">
+                        <img class="icon" src="./img/uk-flag.svg" alt="">
+                        <h3>Project Title</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum earum, tenetur quasi sint molestiae exercitationem?</p>
+                        <a href="#" class="button circle">Learn More</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+
+    <footer></footer>
+
+
+
+
+
+    <script>
+        // Adapt spacing for window size and overlapping elements
+        function adaptForResize() {
+            let skillsCard = document.getElementById('skills');
+            let projectsSection = document.getElementById('projects');
+            let height = skillsCard.offsetHeight - 150;
+            projectsSection.style.paddingTop = `${height}px`;
+        }
+
+        window.onresize = adaptForResize;
+        window.onload = adaptForResize;
+    </script>
 </body>
 
 </html>

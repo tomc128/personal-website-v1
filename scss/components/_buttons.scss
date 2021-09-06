@@ -1,16 +1,15 @@
 .button {
     display: inline-block;
     position: relative;
-    margin-right: 2rem;
     // padding: 1rem 2rem;
 
     text-transform: uppercase;
     text-decoration: none;
 
     &.flat {
-        color: black;
+        color: $darkText;
 
-        &:after {
+        &::after {
             content: '';
             position: absolute;
             width: 100%;
@@ -22,12 +21,28 @@
             transform-origin: bottom right;
             transition: transform 0.25s ease-out;
 
-            background-color: black;
+            background-color: $darkText;
         }
 
-        &:hover:after {
+        &:hover::after {
             transform: scaleX(1);
             transform-origin: bottom left;
+        }
+    }
+
+    &.circle {
+        padding: 1rem 2rem;
+
+        border: 2px solid $darkText;
+        border-radius: 1000px;
+        color: $darkText;
+        text-align: center;
+
+        transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+
+        &:hover {
+            background-color: $darkText;
+            color: $lightText;
         }
     }
 }
