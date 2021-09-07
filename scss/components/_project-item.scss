@@ -1,12 +1,9 @@
 .project-item {
     position: relative;
-    padding: 3rem 1rem;
-    height: auto;
-    
+    width: 100%;
+
     overflow: hidden;
     border-radius: 1rem;
-
-    @include centred-flex(vertical, true, true);
 
     > img.background {
         position: absolute;
@@ -16,25 +13,36 @@
         z-index: 0;
 
         opacity: 75%;
-        filter: blur(10px);
+        // filter: blur(10px);
         transform: scale(1.1);
 
         transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
-    > * {
+
+    > .content {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 3rem 1rem;
         z-index: 10;
-    }
-    > img.icon {
-        width: 4rem;
-        height: 4rem;
-        display: block;
-    }
-    > p {
-        margin-top: 1rem;
-        text-align: center;
-    }
-    > .button {
-        margin-top: 2rem;
+
+        @include centred-flex(vertical, true, true);
+
+        background-color: $lightBlurredOverlay;
+        backdrop-filter: blur(10px);
+
+        > img.icon {
+            width: 4rem;
+            height: 4rem;
+            display: block;
+        }
+        > p {
+            margin-top: 1rem;
+            text-align: center;
+        }
+        > .button {
+            margin-top: 2rem;
+        }
     }
 
     &:hover {

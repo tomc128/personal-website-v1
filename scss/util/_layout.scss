@@ -15,23 +15,26 @@
 .responsive-grid {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    gap: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 
-    // > * {
-    //     border-top: 1px solid $darkDivider;
-    //     border-left: 1px solid $darkDivider;
-    // }
+    @for $i from 1 through 10 {
+        &.grid-spacing--#{$i}:not(.bordered) {
+            gap: #{$i}rem #{$i}rem;
+        }
+    }
 
-    background-color: $darkDivider;
+    &.bordered {
+        background-color: $darkDivider;
+        gap: 1px;
 
-    > * {
-        background-color: white;
+        > * {
+            background-color: white;
+        }
     }
 }
 
 @for $i from 1 through 10 {
-    .spacer-#{$i} {
+    .spacer--#{$i} {
         height: #{$i}rem;
     }
 }
