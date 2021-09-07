@@ -8,7 +8,7 @@
     }
 
     &.centred {
-        @include centred-flex(horizontal);
+        @include custom-flex(horizontal);
     }
 }
 

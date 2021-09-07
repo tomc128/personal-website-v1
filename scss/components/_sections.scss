@@ -1,15 +1,13 @@
-section {
+section, footer {
     position: relative;
     width: 100%;
 
-    @include centred-flex(vertical, true, false);
+    @include custom-flex(vertical, true, false);
 
     > .content {
         max-width: 120rem;
         width: 100vw;
         height: 100%;
-
-        // @include centred-flex(vertical);
 
         @include phone {
             padding: 0 1rem;
@@ -31,7 +29,7 @@ section {
         background-color: #fcfcfc;
 
         > .content {
-            @include centred-flex(vertical);
+            @include custom-flex(vertical);
 
             img {
                 max-height: 40vh;
@@ -81,7 +79,7 @@ section {
         background: linear-gradient(to right, #f957b0, #eb7d0e);
 
         > .content {
-            @include centred-flex(vertical);
+            @include custom-flex(vertical);
         }
 
         > .wave-divider {
@@ -113,5 +111,9 @@ section {
 
 footer {
     height: 50vh;
+
+    > .content {        
+        @include custom-flex(vertical, false, true);
+    }
 
 }

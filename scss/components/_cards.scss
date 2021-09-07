@@ -27,7 +27,7 @@
             padding: 5rem 5%;
         }
 
-        @include centred-flex(vertical);
+        @include custom-flex(vertical);
 
         text-align: center;
     }

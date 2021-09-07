@@ -1,4 +1,4 @@
-@mixin centred-flex($direction, $mainCentre: true, $crossCentre: true) {
+@mixin custom-flex($direction, $mainCentre: true, $crossCentre: true) {
     display: flex;
     
     align-items: if($mainCentre == true, center, flex-start);
