@@ -1,4 +1,5 @@
-section, footer {
+section,
+footer {
     position: relative;
     width: 100%;
 
@@ -80,6 +81,8 @@ section, footer {
 
         > .content {
             @include custom-flex(vertical);
+
+            text-align: center;
         }
 
         > .wave-divider {
@@ -112,8 +115,14 @@ section, footer {
 footer {
     height: 50vh;
 
-    > .content {        
-        @include custom-flex(vertical, false, true);
-    }
+    > .content {
+        @include phone {
+            @include custom-flex(vertical, true, true);
+            text-align: center;
+        }
 
+        @include desktop {
+            @include custom-flex(vertical, false, true);
+        }
+    }
 }
