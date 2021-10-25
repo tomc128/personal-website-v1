@@ -1,29 +1,45 @@
 :root {
     @include light-theme {
-        --text--on-theme: $darkText;
-        --text--on-opposite: $lightText;
+        --text--on-theme: #{$darkText};
+        --text--on-opposite: #{$lightText};
 
-        --divider--on-theme: $darkDivider;
-        --divider--on-opposite: $lightDivider;
+        --divider--on-theme: #{$darkDivider};
+        --divider--on-opposite: #{$lightDivider};
 
-        --tooltip--on-theme: $darkTooltip;
-        --tooltip--on-opposite: $lightTooltip;
+        --tooltip--on-theme: #{$darkTooltip};
+        --tooltip--on-opposite: #{$lightTooltip};
 
-        --blurred-overlay--on-theme: $lightBlurredOverlay;
-        --blurred-overlay--on-oppsite: $darkBlurredOverlay;
+        --blurred-overlay--on-theme: #{$lightBlurredOverlay};
+        --blurred-overlay--on-oppsite: #{$darkBlurredOverlay};
+
+        --card-background-colour: #{$lightText};
+
+        --section--hero--background-colour: #fcfcfc;
+        --section--about--background: linear-gradient(to right, #f957b0, #eb7d0e);
+        --section--projects--background-colour: #e0e0e0;
+
+        --footer--background-colour: rgb(255, 255, 255);
     }
 
     @include dark-theme {
-        --text--on-theme: $lightText;
-        --text--on-opposite: $darkText;
+        --text--on-theme: #{$lightText};
+        --text--on-opposite: #{$darkText};
 
-        --divider--on-theme: $lightDivider;
-        --divider--on-opposite: $darkDivider;
+        --divider--on-theme: #{$lightDivider};
+        --divider--on-opposite: #{$darkDivider};
         
-        --tooltip--on-theme: $lightTooltip;
-        --tooltip--on-opposite: $darkTooltip;
+        --tooltip--on-theme: #{$lightTooltip};
+        --tooltip--on-opposite: #{$darkTooltip};
         
-        --blurred-overlay--on-theme: $darkBlurredOverlay;
-        --blurred-overlay--on-oppsite: $lightBlurredOverlay;
+        --blurred-overlay--on-theme: #{$darkBlurredOverlay};
+        --blurred-overlay--on-oppsite: #{$lightBlurredOverlay};
+
+        --card-background-colour: #{$darkText};
+
+        --section--hero--background-colour: #0e0e0e;
+        --section--about--background: linear-gradient(to right, #61163f, #693a0a);
+        --section--projects--background-colour: #131313;
+
+        --footer--background-colour: rgb(12, 12, 12);
     }
 }

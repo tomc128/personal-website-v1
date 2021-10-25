@@ -13,7 +13,8 @@
     z-index: 10;
     margin-top: 10rem;
 
-    color: $darkText;
+    color: var(--text--on-theme);
+    background-color: var(--card-background-colour);
 
     > .content {
         position: relative;
@@ -43,7 +44,7 @@
                 @include phone {
                     padding: 5rem 1rem;
                 }
-        
+
                 @include desktop {
                     padding: 5rem 3rem;
                 }

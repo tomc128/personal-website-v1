@@ -10,8 +10,8 @@
         padding: 10px;
         border-radius: .5rem;
 
-        background: $darkTooltip;
-        color: $lightText;
+        background:  var(--tooltip--on-theme);
+        color: var(--text--on-opposite);
     }
 
     &:hover::before {

@@ -27,7 +27,7 @@ footer {
     &#hero {
         height: 100vh;
 
-        background-color: #fcfcfc;
+        background-color: var(--section--hero--background-colour);
 
         > .content {
             @include custom-flex(vertical);
@@ -53,6 +53,8 @@ footer {
 
             .info {
                 padding: 2rem;
+
+                color: var(--text--on-theme);
 
                 h1 {
                     font-size: 4rem;
@@ -85,8 +87,8 @@ footer {
         padding-top: 200px; // Divider padding
         padding-bottom: 350px; // Divider padding
 
-        color: $lightText;
-        background: linear-gradient(to right, #f957b0, #eb7d0e);
+        color: var(--text--on-theme);
+        background: var(--section--about--background);
 
         > .content {
             @include custom-flex(vertical);
@@ -96,10 +98,10 @@ footer {
 
         > .wave-divider {
             &.top .shape-fill {
-                fill: #fcfcfc;
+                fill: var(--section--hero--background-colour);
             }
             &.bottom .shape-fill {
-                fill: #e0e0e0;
+                fill: var(--section--projects--background-colour);
             }
         }
     }
@@ -108,7 +110,7 @@ footer {
         min-height: 100vh;
         padding-bottom: 5rem;
 
-        background-color: #e0e0e0;
+        background-color: var(--section--projects--background-colour);
 
         > .content {
             height: 100%;
@@ -117,12 +119,17 @@ footer {
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
+
+            color: var(--text--on-theme);
         }
     }
 }
 
 footer {
     height: 50vh;
+
+    background-color: var(--footer--background-colour);
+    color: var(--text--on-theme);
 
     > .content {
         @include phone {

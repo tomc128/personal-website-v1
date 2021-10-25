@@ -25,11 +25,11 @@
     }
 
     &.bordered {
-        background-color: $darkDivider;
+        background-color: var(--divider--on-theme);
         gap: 1px;
 
         > * {
-            background-color: white;
+            background-color: var(--card-background-colour);
         }
     }
 }

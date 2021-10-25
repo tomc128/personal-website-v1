@@ -7,7 +7,7 @@
     text-decoration: none;
 
     &.flat {
-        color: $darkText;
+        color: var(--text--on-theme);
 
         &::after {
             content: '';
@@ -21,7 +21,7 @@
             transform-origin: bottom right;
             transition: transform 0.25s ease-out;
 
-            background-color: $darkText;
+            background-color:  var(--text--on-theme);
         }
 
         &:hover::after {
@@ -33,17 +33,17 @@
     &.circle {
         padding: 1rem 2rem;
 
-        border: 2px solid $darkText;
+        border: 2px solid var(--text--on-theme);
         border-radius: 1000px;
-        color: $darkText;
+        color: var(--text--on-theme);
         text-align: center;
         font-size: 1rem;
 
         transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 
         &:hover {
-            background-color: $darkText;
-            color: $lightText;
+            background-color: var(--text--on-theme);
+            color: var(--text--on-opposite);
         }
     }
 }
