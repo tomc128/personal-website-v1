@@ -37,9 +37,18 @@ footer {
                 max-width: 40vh;
                 width: 80%;
 
-                box-shadow: 0 4.5px 3.6px rgba(0, 0, 0, 0.052), 0 12.5px 10px rgba(0, 0, 0, 0.075),
-                    0 30.1px 24.1px rgba(0, 0, 0, 0.098), 0 100px 80px rgba(0, 0, 0, 0.15);
+                box-shadow: 0px 4.5px 5.8px rgba(0, 0, 0, 0.052), 0px 12.5px 15.9px rgba(0, 0, 0, 0.075),
+                    0px 30.1px 38.3px rgba(0, 0, 0, 0.098), 0px 100px 127px rgba(0, 0, 0, 0.15);
+
                 border-radius: 54% 46% 48% 52% / 62% 38% 62% 38%;
+
+                &:hover {
+                    box-shadow: 0px 7.2px 5.4px rgba(0, 0, 0, 0.059), 0px 20px 15px rgba(0, 0, 0, 0.085),
+                        0px 48.2px 36.2px rgba(0, 0, 0, 0.111), 0px 160px 120px rgba(0, 0, 0, 0.17);
+                    transform: scale(1.05);
+                }
+
+                transition: box-shadow 0.25s ease-in-out, transform 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
             }
 
             .info {

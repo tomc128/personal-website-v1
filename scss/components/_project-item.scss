@@ -63,4 +63,31 @@
             transform: scale(1.2);
         }
     }
+
+    &#project--dash-dodge h3 {
+        @include light-theme {
+            color: rgb(11, 46, 5);
+        }
+        @include dark-theme {
+            color: rgb(11, 46, 5);
+        }
+    }
+
+    &#project--simpliplan h3 {
+        @include light-theme {
+            color: rgb(65, 22, 5);
+        }
+        @include dark-theme {
+            color: rgb(65, 22, 5);
+        }
+    }
+
+    &#project--tomscript h3 {
+        @include light-theme {
+            color: rgb(7, 30, 73);
+        }
+        @include dark-theme {
+            color: rgb(7, 30, 73);
+        }
+    }
 }

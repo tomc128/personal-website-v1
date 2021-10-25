@@ -1,0 +1,29 @@
+:root {
+    @include light-theme {
+        --text--on-theme: $darkText;
+        --text--on-opposite: $lightText;
+
+        --divider--on-theme: $darkDivider;
+        --divider--on-opposite: $lightDivider;
+
+        --tooltip--on-theme: $darkTooltip;
+        --tooltip--on-opposite: $lightTooltip;
+
+        --blurred-overlay--on-theme: $lightBlurredOverlay;
+        --blurred-overlay--on-oppsite: $darkBlurredOverlay;
+    }
+
+    @include dark-theme {
+        --text--on-theme: $lightText;
+        --text--on-opposite: $darkText;
+
+        --divider--on-theme: $lightDivider;
+        --divider--on-opposite: $darkDivider;
+        
+        --tooltip--on-theme: $lightTooltip;
+        --tooltip--on-opposite: $darkTooltip;
+        
+        --blurred-overlay--on-theme: $darkBlurredOverlay;
+        --blurred-overlay--on-oppsite: $lightBlurredOverlay;
+    }
+}
