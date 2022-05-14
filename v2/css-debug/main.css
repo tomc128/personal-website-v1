@@ -101,7 +101,14 @@ section > .container {
   text-decoration: none;
 }
 .button.hero.big {
-  border: 3px solid rgb(0, 0, 0);
+  border-width: 3px;
+  border-style: solid;
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--foreground);
 }
 
 section#hero .container {
@@ -114,9 +121,9 @@ section#hero .container .left {
   flex: 1 1 0;
 }
 section#hero .container .left h1 {
-  font-size: clamp(2rem, 4.5vw, 4rem);
+  font-size: clamp(2rem, 3vw, 3.5rem);
   font-weight: 700;
-  line-height: 120%;
+  line-height: 140%;
 }
 section#hero .container .right {
   position: relative;

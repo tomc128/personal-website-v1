@@ -1,5 +1,6 @@
 @mixin outline-button {
-    border: 3px solid rgb(0, 0, 0);
+    border-width: 3px;
+    border-style: solid;
 }
 
 .button {
@@ -8,6 +9,15 @@
     &.hero {
         &.big {
             @include outline-button;
+            display: inline-block;
+
+            padding: 1rem 2rem;
+            margin-top: 2rem;
+
+            font-size: 1rem;
+            font-weight: 500;
+
+            color: var(--foreground);
         }
     }
 }
