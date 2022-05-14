@@ -50,7 +50,7 @@ input {
 
 :root {
   --side-spacing: clamp(1rem, 4vw, 5rem);
-  --content-box-size: clamp(calc(100vw - 5rem), auto , 50vw);
+  --content-box-size: max(50vw, calc(70% ));
 }
 @media (prefers-color-scheme: light) {
   :root {
@@ -78,12 +78,23 @@ body {
   overflow-x: hidden;
 }
 
-section {
-  display: flex;
-  justify-content: center;
+section > .container {
+  margin: 0 4%;
 }
-section > .content {
-  width: var(--content-box-size);
+@media (min-width: 64em) {
+  section > .container {
+    margin: 0 8%;
+  }
+}
+@media (min-width: 85.375em) {
+  section > .container {
+    margin: 0 15%;
+  }
+}
+@media (min-width: 120em) {
+  section > .container {
+    margin: 0 20%;
+  }
 }
 
 .button {
@@ -93,26 +104,26 @@ section > .content {
   border: 3px solid rgb(0, 0, 0);
 }
 
-section#hero .content {
+section#hero .container {
   height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-section#hero .content .left {
+section#hero .container .left {
   flex: 1 1 0;
 }
-section#hero .content .left h1 {
+section#hero .container .left h1 {
   font-size: clamp(2rem, 4.5vw, 4rem);
   font-weight: 700;
   line-height: 120%;
 }
-section#hero .content .right {
+section#hero .container .right {
   position: relative;
   right: -8%;
   flex: 1 1 0;
 }
-section#hero .content .right svg.graphic {
+section#hero .container .right svg.graphic {
   width: 100%;
   color: var(--primary-colour);
 }

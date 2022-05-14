@@ -27,5 +27,6 @@ $light-primary-colour: #EB5757;
 
     // content-box-size - this variable controls how wide the content box is, on a 4k display for example, it should not fill the full width
     // --content-box-size: clamp(100vw, auto, calc(100vw - 25%));
-    --content-box-size: clamp(calc(100vw - 5rem), auto , 50vw);
+    // --content-box-size: clamp(calc(100vw - 5rem), auto , 50vw);
+    --content-box-size:  max(50vw, calc(70% ));
 }

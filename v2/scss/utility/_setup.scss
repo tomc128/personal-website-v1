@@ -1,3 +1,5 @@
+@use './mixins';
+
 html {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
@@ -10,10 +12,18 @@ body {
 }
 
 section {
-    display: flex;
-    justify-content: center;
 
-    > .content {
-        width: var(--content-box-size); 
+    > .container {
+        margin: 0 4%;
+
+        @include mixins.display-medium {
+            margin: 0 8%;
+        }
+        @include mixins.display-large {
+            margin: 0 15%;
+        }
+        @include mixins.display-xlarge {
+            margin: 0 20%;
+        }
     }
 }
