@@ -1,0 +1,13 @@
+@mixin outline-button {
+    border: 3px solid rgb(0, 0, 0);
+}
+
+.button {
+    text-decoration: none;
+    
+    &.hero {
+        &.big {
+            @include outline-button;
+        }
+    }
+}

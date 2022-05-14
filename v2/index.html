@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom Chapman</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <nav>
+
+    </nav>
+
+    <section id="hero">
+        <div class="content">
+            <div class="left">
+                <h1>I'm Tom, a hobbyist programmer and software developer.</h1>
+                <a href="#" class="button hero big">My Projects</a>
+            </div>
+            <div class="right">
+                <div class="circle"></div>
+                <!-- <img class="picture" src="./img/me-cutout.png" alt=""> -->
+                <svg class="graphic" viewBox="0 0 200 200">
+                    <defs>
+                        <clipPath id="insideCircleOnly">
+                          <circle cx="100" cy="100" r="99"/>
+                        </clipPath>
+                      </defs>
+                    <circle cx="100" cy="100" r="100" stroke="currentColor" stroke-width="50" fill="none" clip-path="url(#insideCircleOnly)" />
+                    <image href="./img/me-cutout.png" height="200" width="200" clip-path="url(#insideCircleOnly)"/>
+                </svg>
+            </div>
+        </div>
+        
+    </section>
+</body>
+
+</html>

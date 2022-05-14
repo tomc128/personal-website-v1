@@ -1,0 +1,31 @@
+@use 'mixins';
+
+// Dark
+$dark-foreground: #fff;
+$dark-background: #000;
+$dark-primary-colour: #EB5757;
+
+// Light
+$light-foreground: #000;
+$light-background: #fff;
+$light-primary-colour: #EB5757;
+
+:root {
+    @include mixins.light {
+        --foreground: #{$light-foreground};
+        --background: #{$light-background};
+        --primary-colour: #{$light-primary-colour};
+    }
+    @include mixins.dark {
+        --foreground: #{$dark-foreground};
+        --background: #{$dark-background};
+        --primary-colour: #{$dark-primary-colour};
+    }
+
+    // spacing along side of the page, changing depending on mobile or desktop using clamp
+    --side-spacing: clamp(1rem, 4vw, 5rem);
+
+    // content-box-size - this variable controls how wide the content box is, on a 4k display for example, it should not fill the full width
+    // --content-box-size: clamp(100vw, auto, calc(100vw - 25%));
+    --content-box-size: clamp(calc(100vw - 5rem), auto , 50vw);
+}

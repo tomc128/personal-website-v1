@@ -1,0 +1,19 @@
+html {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    overflow-x: hidden;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+
+    > .content {
+        width: var(--content-box-size); 
+    }
+}

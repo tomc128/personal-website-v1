@@ -1,0 +1,40 @@
+@use '../utility/mixins';
+
+section {
+    &#hero {
+        .content {
+            height: 100vh;
+             
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+    
+    
+            .left {
+                flex: 1 1 0;
+    
+                h1 {
+                    font-size: clamp(2rem, 4.5vw, 4rem);
+                    font-weight: 700;
+                    line-height: 120%;
+                }
+            }
+    
+            .right {
+                position: relative;
+                right: -8%;
+                flex: 1 1 0;
+    
+                svg.graphic {
+                    width: 100%;
+    
+                    // right: -15%;
+    
+                    color: var(--primary-colour);
+                }
+            }
+        }
+
+       
+    }
+}

@@ -1,0 +1,19 @@
+@mixin light {
+    @media (prefers-color-scheme: light) {
+        @content;
+    }
+}
+@mixin dark {
+    @media (prefers-color-scheme: dark) {
+        @content;
+    }
+}
+
+@mixin flex($direction, $mainCentre: true, $crossCentre: true) {
+    display: flex;
+    
+    align-items: if($mainCentre == true, center, flex-start);
+    justify-content: if($crossCentre == true, center, flex-start);
+
+    flex-direction: if($direction == horizontal, row, column);
+}
