@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
-*, *:before, *:after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -213,11 +213,19 @@ p {
   overflow: hidden;
   background-color: var(--background-two);
 }
-.card > .container {
-  margin: 2rem 2rem;
+.card.big > .container {
+  margin: 3rem;
 }
+.card > .container {
+  margin: 2rem;
+}
+.card > .container h1,
 .card > .container h2 {
   margin: 1rem 0;
+}
+.card.raised {
+  z-index: 10;
+  box-shadow: 0px 5.7px 4.5px rgba(0, 0, 0, 0.042), 0px 15.2px 12.5px rgba(0, 0, 0, 0.06), 0px 34.6px 30.1px rgba(0, 0, 0, 0.078), 0px 100px 100px rgba(0, 0, 0, 0.12);
 }
 .card::after {
   content: "";
@@ -271,14 +279,32 @@ section#about {
   background-color: var(--background);
 }
 section#about > .container {
-  height: 100vh;
+  height: auto;
 }
 
-#about-separator {
+section#tech {
+  background-color: var(--background);
+}
+section#tech > .container {
+  height: auto;
+}
+
+#tech-separator {
+  position: relative;
+  top: -7rem;
   color: var(--background-two);
 }
-#about-separator > svg {
+#tech-separator > svg {
   height: 8rem;
+}
+
+section#projects {
+  margin-top: -7rem;
+  background-color: var(--background-two);
+}
+section#projects > .container {
+  height: 100vh;
+  padding-top: 5rem;
 }
 
 footer {

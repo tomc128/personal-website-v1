@@ -1,0 +1,20 @@
+@use '../utility/mixins';
+
+section#tech {
+    background-color: var(--background);
+    > .container {
+        height: auto;
+    }
+}
+
+#tech-separator {
+    position: relative;
+    top: -7rem;
+
+    color: var(--background-two);
+
+    > svg {
+        height: 8rem;
+    }
+}
+

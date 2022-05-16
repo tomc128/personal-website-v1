@@ -1,0 +1,12 @@
+@use '../utility/mixins';
+
+section#projects {
+    margin-top: -7rem;
+
+    background-color: var(--background-two);
+
+    > .container {
+        height: 100vh;
+        padding-top: 5rem;
+    }
+}
