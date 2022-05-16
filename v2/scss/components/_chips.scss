@@ -1,0 +1,9 @@
+@use '../utility/variables';
+
+.chip {
+    display: inline;
+    padding: 0.5rem 1rem;
+    border-radius: #{variables.$small-border-radius};
+    background-color: var(--background-four);
+    
+}

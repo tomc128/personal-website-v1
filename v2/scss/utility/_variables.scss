@@ -5,6 +5,7 @@ $dark-foreground: #fff;
 $dark-background: #000;
 $dark-background-two: #111;
 $dark-background-three: #222;
+$dark-background-four: #333;
 $dark-primary-colour: #eb5757;
 $dark-primary-colour-two: #f98e8e;
 $dark-primary-colour-three: #ffc3c3;
@@ -14,13 +15,15 @@ $light-foreground: #000;
 $light-background: #fff;
 $light-background-two: #f3f3f3;
 $light-background-three: #ebebeb;
+$light-background-four: #D9D9D9;
 $light-primary-colour: #eb5757;
 $light-primary-colour-two: #f98e8e;
 $light-primary-colour-three: #ffc3c3;
 
 // Spacing & Guides
 $decoration-height: 0.5rem;
-$border-radius: 1rem;
+$main-border-radius: 0.75rem;
+$small-border-radius: 0.25rem;
 
 :root {
     @include mixins.light {
@@ -28,6 +31,7 @@ $border-radius: 1rem;
         --background: #{$light-background};
         --background-two: #{$light-background-two};
         --background-three: #{$light-background-three};
+        --background-four: #{$light-background-four};
         --primary-colour: #{$light-primary-colour};
         --primary-colour-two: #{$light-primary-colour-two};
         --primary-colour-three: #{$light-primary-colour-three};
@@ -37,6 +41,7 @@ $border-radius: 1rem;
         --background: #{$dark-background};
         --background-two: #{$dark-background-two};
         --background-three: #{$dark-background-three};
+        --background-four: #{$dark-background-four};
         --primary-colour: #{$dark-primary-colour};
         --primary-colour-two: #{$dark-primary-colour-two};
         --primary-colour-three: #{$dark-primary-colour-three};

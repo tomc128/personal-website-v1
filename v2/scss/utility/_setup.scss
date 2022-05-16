@@ -14,6 +14,7 @@ body {
 section {
     > .container {
         margin: 0 4%;
+        height: 100vh;
 
         @include mixins.display-medium {
             margin: 0 8%;
@@ -30,6 +31,10 @@ section {
 section, footer {
     h1 {
         font-size: 1.5rem;
+        font-weight: 700;
+    }
+    h2 {
+        font-size: 1.2rem;
         font-weight: 700;
     }
 }

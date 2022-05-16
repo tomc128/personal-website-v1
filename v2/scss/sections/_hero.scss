@@ -3,7 +3,7 @@
 section {
     &#hero {
         background-color: var(--background-two);
-        .container {
+        > .container {
             height: 100vh;
              
             display: flex;

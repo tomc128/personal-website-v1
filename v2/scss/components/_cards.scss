@@ -2,15 +2,20 @@
 
 .card {
     position: relative;
-    border-radius: #{variables.$border-radius};
+    border-radius: #{variables.$main-border-radius};
+    overflow: hidden;
 
     background-color: var(--background-two);
 
     > .container {
-        margin: 2rem 3rem;
+        margin: 2rem 2rem;
+
+        h2 {
+            margin: 1rem 0;
+        }
     }
 
-    &::before {
+    &::after {
         content: '';
         position: absolute;
         inset: 0;

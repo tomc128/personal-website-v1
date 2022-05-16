@@ -1,0 +1,15 @@
+@use '../utility/mixins';
+
+section#about {
+    background-color: var(--background);
+    > .container {
+        height: 100vh;
+    }
+}
+
+#about-separator {
+    color: var(--background-two);
+    > svg {
+        height: 8rem;
+    }
+}

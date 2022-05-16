@@ -14,8 +14,10 @@
 @use './components/text';
 @use './components/layout';
 @use './components/cards';
+@use './components/chips';
 
 // Sections
 @use './sections/hero';
+@use './sections/about';
 @use './sections/footer';
 
