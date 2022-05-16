@@ -1,10 +1,13 @@
 section {
+    h1 {
+        margin: 1rem 0;
+    }
+
     .title-decoration {
         position: relative;
         display: inline-block;
         height: 0.5rem;
         width: 6rem;
-        margin-bottom: 0.75rem;
 
         background-color: beige;
 
@@ -32,4 +35,8 @@ section {
             background-color: var(--primary-colour);
         }
     }
+}
+
+p {
+    line-height: normal;
 }
