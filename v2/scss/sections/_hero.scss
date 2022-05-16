@@ -2,6 +2,7 @@
 
 section {
     &#hero {
+        background-color: var(--background-two);
         .container {
             height: 100vh;
              
@@ -36,5 +37,13 @@ section {
         }
 
        
+    }
+}
+
+
+#hero-separator {
+    color: var(--background-two);
+    > svg {
+        height: 8rem;
     }
 }

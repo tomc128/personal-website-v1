@@ -3,22 +3,30 @@
 // Dark
 $dark-foreground: #fff;
 $dark-background: #000;
+$dark-background-two: #111;
+$dark-background-three: #222;
 $dark-primary-colour: #EB5757;
 
 // Light
 $light-foreground: #000;
 $light-background: #fff;
+$light-background-two: #f3f3f3;
+$light-background-three: #ebebeb;
 $light-primary-colour: #EB5757;
 
 :root {
     @include mixins.light {
         --foreground: #{$light-foreground};
         --background: #{$light-background};
+        --background-two: #{$light-background-two};
+        --background-three: #{$light-background-three};
         --primary-colour: #{$light-primary-colour};
     }
     @include mixins.dark {
         --foreground: #{$dark-foreground};
         --background: #{$dark-background};
+        --background-two: #{$dark-background-two};
+        --background-three: #{$dark-background-three};
         --primary-colour: #{$dark-primary-colour};
     }
 

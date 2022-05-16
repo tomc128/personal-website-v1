@@ -56,6 +56,8 @@ input {
   :root {
     --foreground: #000;
     --background: #fff;
+    --background-two: #f3f3f3;
+    --background-three: #ebebeb;
     --primary-colour: #EB5757;
   }
 }
@@ -63,6 +65,8 @@ input {
   :root {
     --foreground: #fff;
     --background: #000;
+    --background-two: #111;
+    --background-three: #222;
     --primary-colour: #EB5757;
   }
 }
@@ -97,6 +101,13 @@ section > .container {
   }
 }
 
+.separator {
+  width: 100%;
+}
+.separator > svg {
+  width: 100%;
+}
+
 .button {
   text-decoration: none;
 }
@@ -111,6 +122,9 @@ section > .container {
   color: var(--foreground);
 }
 
+section#hero {
+  background-color: var(--background-two);
+}
 section#hero .container {
   height: 100vh;
   display: flex;
@@ -133,4 +147,11 @@ section#hero .container .right {
 section#hero .container .right svg.graphic {
   width: 100%;
   color: var(--primary-colour);
+}
+
+#hero-separator {
+  color: var(--background-two);
+}
+#hero-separator > svg {
+  height: 8rem;
 }
