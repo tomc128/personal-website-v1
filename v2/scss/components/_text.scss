@@ -1,3 +1,5 @@
+@use '../utility/variables';
+
 section {
     h1 {
         margin: 1rem 0;
@@ -6,10 +8,8 @@ section {
     .title-decoration {
         position: relative;
         display: inline-block;
-        height: 0.5rem;
+        height: #{variables.$decoration-height};
         width: 6rem;
-
-        background-color: beige;
 
         > span:nth-child(1) {
             position: absolute;

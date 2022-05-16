@@ -1,0 +1,21 @@
+@use '../utility/variables';
+
+.card {
+    position: relative;
+    border-radius: #{variables.$border-radius};
+
+    background-color: var(--background-two);
+
+    > .container {
+        margin: 2rem 3rem;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        height: #{variables.$decoration-height};
+
+        background-color: var(--primary-colour);
+    }
+}

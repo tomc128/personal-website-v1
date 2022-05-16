@@ -18,6 +18,10 @@ $light-primary-colour: #eb5757;
 $light-primary-colour-two: #f98e8e;
 $light-primary-colour-three: #ffc3c3;
 
+// Spacing & Guides
+$decoration-height: 0.5rem;
+$border-radius: 1rem;
+
 :root {
     @include mixins.light {
         --foreground: #{$light-foreground};
