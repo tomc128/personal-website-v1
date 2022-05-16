@@ -1,0 +1,35 @@
+section {
+    .title-decoration {
+        position: relative;
+        display: inline-block;
+        height: 0.5rem;
+        width: 6rem;
+        margin-bottom: 0.75rem;
+
+        background-color: beige;
+
+        > span:nth-child(1) {
+            position: absolute;
+            inset: 0;
+            border-radius: 1rem;
+
+            background-color: var(--primary-colour-three);
+        }
+        > span:nth-child(2) {
+            position: absolute;
+            inset: 0;
+            border-radius: 1rem;
+            right: 33%;
+
+            background-color: var(--primary-colour-two);
+        }
+        > span:nth-child(3) {
+            position: absolute;
+            inset: 0;
+            border-radius: 1rem;
+            right: 67%;
+
+            background-color: var(--primary-colour);
+        }
+    }
+}

@@ -50,7 +50,7 @@ input {
 
 :root {
   --side-spacing: clamp(1rem, 4vw, 5rem);
-  --content-box-size: max(50vw, calc(70% ));
+  --content-box-size: max(50vw, calc(70%));
 }
 @media (prefers-color-scheme: light) {
   :root {
@@ -58,7 +58,9 @@ input {
     --background: #fff;
     --background-two: #f3f3f3;
     --background-three: #ebebeb;
-    --primary-colour: #EB5757;
+    --primary-colour: #eb5757;
+    --primary-colour-two: #f98e8e;
+    --primary-colour-three: #ffc3c3;
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -67,13 +69,15 @@ input {
     --background: #000;
     --background-two: #111;
     --background-three: #222;
-    --primary-colour: #EB5757;
+    --primary-colour: #eb5757;
+    --primary-colour-two: #f98e8e;
+    --primary-colour-three: #ffc3c3;
   }
 }
 
 html {
   font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
+  overflow-x: initial;
 }
 
 body {
@@ -101,6 +105,11 @@ section > .container {
   }
 }
 
+section h1, footer h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 .separator {
   width: 100%;
 }
@@ -122,6 +131,35 @@ section > .container {
   color: var(--foreground);
 }
 
+section .title-decoration {
+  position: relative;
+  display: inline-block;
+  height: 0.5rem;
+  width: 6rem;
+  margin-bottom: 0.75rem;
+  background-color: beige;
+}
+section .title-decoration > span:nth-child(1) {
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  background-color: var(--primary-colour-three);
+}
+section .title-decoration > span:nth-child(2) {
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  right: 33%;
+  background-color: var(--primary-colour-two);
+}
+section .title-decoration > span:nth-child(3) {
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  right: 67%;
+  background-color: var(--primary-colour);
+}
+
 section#hero {
   background-color: var(--background-two);
 }
@@ -136,7 +174,6 @@ section#hero .container .left {
 }
 section#hero .container .left h1 {
   font-size: clamp(2rem, 3vw, 3.5rem);
-  font-weight: 700;
   line-height: 140%;
 }
 section#hero .container .right {
@@ -154,4 +191,9 @@ section#hero .container .right svg.graphic {
 }
 #hero-separator > svg {
   height: 8rem;
+}
+
+footer {
+  height: 100vh;
+  background-color: var(--background-three);
 }

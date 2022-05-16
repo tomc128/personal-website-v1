@@ -5,14 +5,18 @@ $dark-foreground: #fff;
 $dark-background: #000;
 $dark-background-two: #111;
 $dark-background-three: #222;
-$dark-primary-colour: #EB5757;
+$dark-primary-colour: #eb5757;
+$dark-primary-colour-two: #f98e8e;
+$dark-primary-colour-three: #ffc3c3;
 
 // Light
 $light-foreground: #000;
 $light-background: #fff;
 $light-background-two: #f3f3f3;
 $light-background-three: #ebebeb;
-$light-primary-colour: #EB5757;
+$light-primary-colour: #eb5757;
+$light-primary-colour-two: #f98e8e;
+$light-primary-colour-three: #ffc3c3;
 
 :root {
     @include mixins.light {
@@ -21,6 +25,8 @@ $light-primary-colour: #EB5757;
         --background-two: #{$light-background-two};
         --background-three: #{$light-background-three};
         --primary-colour: #{$light-primary-colour};
+        --primary-colour-two: #{$light-primary-colour-two};
+        --primary-colour-three: #{$light-primary-colour-three};
     }
     @include mixins.dark {
         --foreground: #{$dark-foreground};
@@ -28,6 +34,8 @@ $light-primary-colour: #EB5757;
         --background-two: #{$dark-background-two};
         --background-three: #{$dark-background-three};
         --primary-colour: #{$dark-primary-colour};
+        --primary-colour-two: #{$dark-primary-colour-two};
+        --primary-colour-three: #{$dark-primary-colour-three};
     }
 
     // spacing along side of the page, changing depending on mobile or desktop using clamp
@@ -36,5 +44,5 @@ $light-primary-colour: #EB5757;
     // content-box-size - this variable controls how wide the content box is, on a 4k display for example, it should not fill the full width
     // --content-box-size: clamp(100vw, auto, calc(100vw - 25%));
     // --content-box-size: clamp(calc(100vw - 5rem), auto , 50vw);
-    --content-box-size:  max(50vw, calc(70% ));
+    --content-box-size: max(50vw, calc(70%));
 }
