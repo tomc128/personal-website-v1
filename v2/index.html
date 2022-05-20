@@ -26,11 +26,20 @@
                 <svg class="graphic" viewBox="0 0 200 200">
                     <defs>
                         <clipPath id="insideCircleOnly">
-                            <circle cx="100" cy="100" r="99" />
+                            <circle cx="100" cy="100" r="89" />
                         </clipPath>
                     </defs>
-                    <circle cx="100" cy="100" r="100" stroke="currentColor" stroke-width="50" fill="none" clip-path="url(#insideCircleOnly)" />
-                    <image href="./img/me-cutout.png" height="200" width="200" clip-path="url(#insideCircleOnly)" />
+                    <!-- Red circle -->
+                    <circle cx="100" cy="100" r="90" stroke="currentColor" stroke-width="50" fill="none" clip-path="url(#insideCircleOnly)" />
+                    
+                    <!-- Small shapes  -->
+                    <circle class="shape" cx="45" cy="160" r="25" stroke="currentColor" stroke-width="3" fill="none" />
+                    <rect class="shape" width="40" height="40" x="45" y="45" stroke="currentColor" stroke-width="3" fill="none" transform="rotate(20 45 45)" />
+                    <path class="shape" transform="rotate(10, 50, 50) translate(150, 20) scale(0.25)" stroke="currentColor" stroke-width="12" fill="none"  d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" />                
+                    
+                    <!-- Image -->
+                    <!-- <image href="./img/me-cutout.png" height="200" width="200" clip-path="url(#insideCircleOnly)" /> -->
+                    <image href="./img/me-2-cutout.png" x="5" y="5" height="190" width="190" clip-path="url(#insideCircleOnly)" />
                 </svg>
             </div>
         </div>

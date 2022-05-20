@@ -72,8 +72,8 @@ input {
     --background-three: #222;
     --background-four: #333;
     --primary-colour: #eb5757;
-    --primary-colour-two: #f98e8e;
-    --primary-colour-three: #ffc3c3;
+    --primary-colour-two: #9d2727;
+    --primary-colour-three: #531515;
   }
 }
 
@@ -287,6 +287,10 @@ section#hero > .container .right {
 section#hero > .container .right svg.graphic {
   width: 100%;
   color: var(--primary-colour);
+}
+section#hero > .container .right svg.graphic .shape {
+  color: var(--foreground);
+  opacity: 0.25;
 }
 
 #hero-separator {

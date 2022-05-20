@@ -27,10 +27,13 @@ section {
     
                 svg.graphic {
                     width: 100%;
-    
-                    // right: -15%;
-    
+
                     color: var(--primary-colour);
+
+                    .shape {
+                        color: var(--foreground);
+                        opacity: 0.25;
+                    }
                 }
             }
         }
