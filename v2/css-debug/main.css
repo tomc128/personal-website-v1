@@ -456,6 +456,7 @@ section#about {
 }
 section#about > .container {
   height: auto;
+  margin-top: 3rem;
 }
 
 section#tech {
@@ -463,6 +464,7 @@ section#tech {
 }
 section#tech > .container {
   height: auto;
+  margin-top: 10rem;
 }
 
 #tech-separator {
