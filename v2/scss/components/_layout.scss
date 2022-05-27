@@ -2,7 +2,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 1rem;
+    gap: clamp(1rem, 2.5vw, 3rem);
 }
 
 .layout.fixed-items {
