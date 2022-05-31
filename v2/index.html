@@ -71,11 +71,11 @@
             <h1>About Me</h1>
             <p>I'm a guy who's interested in programming and software development. Since I was 12, I've been experimenting with all sorts of projects from desktop to web. In the past 5 years, I've explorered countless technologies, ready to build the next big thing.</p>
 
-            <div class="layout stretch-items margin-xlarge">
-                <div class="card flat">
+            <div class="layout stretch-items large-items margin-xlarge">
+                <div class="card flat" data-aos="zoom-out-up">
                     <div class="container">
                         <h2>Mobile</h2>
-                        <p>I’ve crafted several mobile apps and games providing entertainment and utility on-the-go.</p>
+                        <p>I've crafted several mobile apps and games providing entertainment and utility on-the-go.</p>
                         <div class="layout fixed-items margin-medium">
                             <div class="chip">Flutter</div>
                             <div class="chip">Dart</div>
@@ -84,7 +84,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card flat">
+                <div class="card flat" data-aos="zoom-out-up" data-aos-delay="200">
                     <div class="container">
                         <h2>Desktop</h2>
                         <p>Sometimes you need a fully-fledged desktop app. I’ve created several functional apps for PC.</p>
@@ -97,7 +97,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card flat">
+                <div class="card flat" data-aos="zoom-out-up" data-aos-delay="400">
                     <div class="container">
                         <h2>Web</h2>
                         <p>I’ve developed many websites and APIs, that go hand-in-hand with my other projects.</p>
@@ -116,11 +116,44 @@
 
     <section id="tech">
         <div class="container">
-            <div class="card raised big">
+            <div class="card raised big" data-aos="fade-up">
                 <div class="container">
                     <h1>Technologies & Languages</h1>
                     <p>Some of my favourite things to work with.</p>
-                    <p>[insert lots of icons / text here with different technologies and languages I use]</p>
+                    <div class="layout stretch-items small-items margin-small">
+                        <div>
+                            <h2>Languages</h2>
+                            <ul>
+                                <li>C#</li>
+                                <li>Dart</li>
+                                <li>PHP</li>
+                                <li>Python</li>
+                                <li>HTML</li>
+                                <li>CSS & SCSS</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2>Dev Tools</h2>
+                            <ul>
+                                <li>VSCode</li>
+                                <li>Visual Studio</li>
+                                <li>Unity</li>
+                                <li>Git</li>
+                                <li>GitHub Actions</li>
+                                <li>Blender</li>
+                                <li>Bash & SSH</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2>Tech & Stacks</h2>
+                            <ul>
+                                <li>Flutter (Dart)</li>
+                                <li>Unity (C#)</li>
+                                <li>WPF, WinForms (C#)</li>
+                                <li>ASP.NET (C#)</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -145,6 +178,16 @@
     <footer>
         <h1>Footer</h1>
     </footer>
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            easing: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)'
+        });
+    </script>
 
 </body>
 

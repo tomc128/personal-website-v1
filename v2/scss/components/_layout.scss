@@ -1,8 +1,14 @@
 .layout.stretch-items {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: clamp(1rem, 2.5vw, 3rem);
+
+    &.large-items {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+    &.small-items {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
 }
 
 .layout.fixed-items {
