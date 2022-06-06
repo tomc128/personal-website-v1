@@ -3,6 +3,7 @@
 html {
     font-family: 'Poppins', sans-serif;
     overflow-x: initial;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -43,5 +44,6 @@ section, footer {
     width: 100%;
     > svg {
         width: 100%;
+        height: 100%;
     }
 }

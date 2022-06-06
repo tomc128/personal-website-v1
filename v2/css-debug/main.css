@@ -80,6 +80,7 @@ input {
 html {
   font-family: "Poppins", sans-serif;
   overflow-x: initial;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -122,12 +123,13 @@ section h2, footer h2 {
 }
 .separator > svg {
   width: 100%;
+  height: 100%;
 }
 
 .button {
   text-decoration: none;
 }
-.button.hero {
+.button.hero.filled {
   position: relative;
   display: inline-block;
   z-index: 10;
@@ -135,16 +137,16 @@ section h2, footer h2 {
   color: var(--foreground);
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.button.hero.big {
+.button.hero.filled.big {
   padding: 1rem 2rem;
   margin-top: 2rem;
   font-size: 1rem;
   font-weight: 500;
 }
-.button.hero:hover {
+.button.hero.filled:hover {
   color: var(--background);
 }
-.button.hero::before {
+.button.hero.filled::before {
   content: "";
   position: absolute;
   top: -1px;
@@ -155,7 +157,33 @@ section h2, footer h2 {
   background-color: var(--foreground);
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.button.hero:hover::before {
+.button.hero.filled:hover::before {
+  width: calc(100% + 2px);
+}
+.button.hero.text {
+  position: relative;
+  display: inline-block;
+  z-index: 10;
+  color: var(--foreground);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.button.hero.text.big {
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.button.hero.text::after {
+  content: ">";
+  display: none;
+  position: absolute;
+  padding: 0 1rem;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.button.hero.text:hover::after {
+  display: inline-block;
+}
+.button.hero.text:hover::after {
   width: calc(100% + 2px);
 }
 
@@ -451,8 +479,6 @@ section#hero > .container .right svg.graphic image {
 }
 #hero-separator {
   color: var(--background-two);
-}
-#hero-separator > svg {
   height: 8rem;
 }
 
@@ -471,14 +497,18 @@ section#tech > .container {
   height: auto;
   margin-top: 10rem;
 }
+section#tech > .container > .card {
+  min-height: 50vh;
+}
+section#tech > .container > .card li {
+  margin-top: 0.5rem;
+}
 
 #tech-separator {
   position: relative;
   top: -7rem;
-  color: var(--background-two);
-}
-#tech-separator > svg {
   height: 8rem;
+  color: var(--background-two);
 }
 
 section#projects {
@@ -493,4 +523,9 @@ section#projects > .container {
 footer {
   height: 100vh;
   background-color: var(--background-three);
+}
+
+#footer-separator {
+  height: 8rem;
+  color: var(--background-three);
 }

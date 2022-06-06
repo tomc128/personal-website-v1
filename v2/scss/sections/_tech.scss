@@ -5,17 +5,21 @@ section#tech {
     > .container {
         height: auto;
         margin-top: 10rem;
+
+        > .card {
+            min-height: 50vh;
+
+            li {
+                margin-top: 0.5rem;
+            }
+        }
     }
 }
 
 #tech-separator {
     position: relative;
     top: -7rem;
+    height: 8rem;
 
     color: var(--background-two);
-
-    > svg {
-        height: 8rem;
-    }
 }
-
