@@ -584,15 +584,15 @@ section#projects > .container .card {
   min-height: 25vh;
 }
 section#projects > .container #project-dash-dodge {
-  background: var(--image-overlay), url("../../img/projects/dash-dodge/think-outside-the-box.jpg") no-repeat center center;
+  background: var(--image-overlay), url("../img/projects/dash-dodge/think-outside-the-box.jpg") no-repeat center center;
   background-size: cover;
 }
 section#projects > .container #project-simpliplan {
-  background: var(--image-overlay), url("../../img/projects/simpliplan/homework-page.png") no-repeat center 25%;
+  background: var(--image-overlay), url("../img/projects/simpliplan/homework-page.png") no-repeat center 25%;
   background-size: cover;
 }
 section#projects > .container #project-tomscript {
-  background: var(--image-overlay), url("../../img/projects/tomscript/code-playground.png") no-repeat center center;
+  background: var(--image-overlay), url("../img/projects/tomscript/code-playground.png") no-repeat center center;
   background-size: cover;
 }
 
