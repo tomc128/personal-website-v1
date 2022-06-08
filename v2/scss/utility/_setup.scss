@@ -12,10 +12,14 @@ body {
     overflow-x: hidden;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 section {
     > .container {
         margin: 0 4%;
-        height: 100vh;
+        min-height: 100vh;
 
         @include mixins.display-medium {
             margin: 0 8%;

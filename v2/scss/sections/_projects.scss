@@ -6,7 +6,25 @@ section#projects {
     background-color: var(--background-two);
 
     > .container {
-        height: 100vh;
+        min-height: 100vh;
         padding-top: 5rem;
+
+        .card {
+            min-height: 75vh;
+        }
+
+        #project-dash-dodge {
+            background: var(--image-overlay),
+                url('../../img/projects/dash-dodge/think-outside-the-box.jpg') no-repeat center center;
+
+            background-size: cover;
+        }
+
+        #project-simpliplan {
+            background: var(--image-overlay),
+                url('../../img/projects/simpliplan/homework-page.png') no-repeat center top;
+
+            background-size: cover;
+        }
     }
 }

@@ -62,6 +62,7 @@ input {
     --primary-colour: #eb5757;
     --primary-colour-two: #f98e8e;
     --primary-colour-three: #ffc3c3;
+    --image-overlay: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.5));
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -74,6 +75,7 @@ input {
     --primary-colour: #eb5757;
     --primary-colour-two: #9d2727;
     --primary-colour-three: #531515;
+    --image-overlay: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5));
   }
 }
 
@@ -89,9 +91,13 @@ body {
   overflow-x: hidden;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 section > .container {
   margin: 0 4%;
-  height: 100vh;
+  min-height: 100vh;
 }
 @media (min-width: 64em) {
   section > .container {
@@ -129,7 +135,18 @@ section h2, footer h2 {
 .button {
   text-decoration: none;
 }
-.button.hero.filled {
+.button.big {
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.button.small {
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.button.filled {
   position: relative;
   display: inline-block;
   z-index: 10;
@@ -137,16 +154,10 @@ section h2, footer h2 {
   color: var(--foreground);
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.button.hero.filled.big {
-  padding: 1rem 2rem;
-  margin-top: 2rem;
-  font-size: 1rem;
-  font-weight: 500;
-}
-.button.hero.filled:hover {
+.button.filled:hover {
   color: var(--background);
 }
-.button.hero.filled::before {
+.button.filled::before {
   content: "";
   position: absolute;
   top: -1px;
@@ -157,34 +168,31 @@ section h2, footer h2 {
   background-color: var(--foreground);
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.button.hero.filled:hover::before {
+.button.filled:hover::before {
   width: calc(100% + 2px);
 }
-.button.hero.text {
+.button.text {
   position: relative;
   display: inline-block;
   z-index: 10;
   color: var(--foreground);
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.button.hero.text.big {
+.button.text.big {
   padding: 1rem 2rem;
   margin-top: 2rem;
   font-size: 1rem;
   font-weight: 500;
 }
-.button.hero.text::after {
+.button.text::after {
   content: ">";
   display: none;
   position: absolute;
   padding: 0 1rem;
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.button.hero.text:hover::after {
+.button.text:hover::after {
   display: inline-block;
-}
-.button.hero.text:hover::after {
-  width: calc(100% + 2px);
 }
 
 section h1 {
@@ -232,6 +240,9 @@ p {
 .layout.stretch-items.small-items {
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
 }
+.layout.stretch-items.xlarge-items {
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+}
 
 .layout.fixed-items {
   width: 100%;
@@ -239,6 +250,24 @@ p {
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+.layout.flex-container {
+  display: flex;
+}
+.layout.flex-container.down {
+  flex-direction: column;
+}
+.layout.flex-container.across {
+  flex-direction: row;
+}
+
+.layout.stretch-height {
+  height: 100%;
+}
+
+.flex-spacer {
+  flex-grow: 1;
 }
 
 .margin-xsmall {
@@ -261,6 +290,10 @@ p {
   margin: 5rem 0;
 }
 
+.spacer {
+  height: auto;
+}
+
 .card {
   position: relative;
   border-radius: 0.75rem;
@@ -281,7 +314,7 @@ p {
   z-index: 10;
   box-shadow: 0px 5.7px 4.5px rgba(0, 0, 0, 0.042), 0px 15.2px 12.5px rgba(0, 0, 0, 0.06), 0px 34.6px 30.1px rgba(0, 0, 0, 0.078), 0px 100px 100px rgba(0, 0, 0, 0.12);
 }
-.card::after {
+.card.decorated::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -516,8 +549,19 @@ section#projects {
   background-color: var(--background-two);
 }
 section#projects > .container {
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 5rem;
+}
+section#projects > .container .card {
+  min-height: 75vh;
+}
+section#projects > .container #project-dash-dodge {
+  background: var(--image-overlay), url("../../img/projects/dash-dodge/think-outside-the-box.jpg") no-repeat center center;
+  background-size: cover;
+}
+section#projects > .container #project-simpliplan {
+  background: var(--image-overlay), url("../../img/projects/simpliplan/homework-page.png") no-repeat center top;
+  background-size: cover;
 }
 
 footer {

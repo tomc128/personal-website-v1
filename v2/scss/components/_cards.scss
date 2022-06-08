@@ -27,7 +27,7 @@
             0px 34.6px 30.1px rgba(0, 0, 0, 0.078), 0px 100px 100px rgba(0, 0, 0, 0.12);
     }
 
-    &::after {
+    &.decorated::after {
         content: '';
         position: absolute;
         inset: 0;

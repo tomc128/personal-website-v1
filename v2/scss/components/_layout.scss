@@ -9,6 +9,9 @@
     &.small-items {
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     }
+    &.xlarge-items {
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    }
 }
 
 .layout.fixed-items {
@@ -17,6 +20,25 @@
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 0.5rem;
+}
+
+.layout.flex-container {
+    display: flex;
+
+    &.down {
+        flex-direction: column;
+    }
+    &.across {
+        flex-direction: row;
+    }
+}
+
+.layout.stretch-height {
+    height: 100%;
+}
+
+.flex-spacer {
+    flex-grow: 1;
 }
 
 .margin-xsmall {
@@ -33,4 +55,8 @@
 }
 .margin-xlarge {
     margin: 5rem 0;
+}
+
+.spacer {
+    height: auto;
 }
