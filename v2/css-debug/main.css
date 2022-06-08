@@ -97,7 +97,6 @@ body {
 
 section > .container {
   margin: 0 4%;
-  min-height: 100vh;
 }
 @media (min-width: 64em) {
   section > .container {
@@ -254,6 +253,7 @@ p {
 
 .layout.flex-container {
   display: flex;
+  align-items: flex-start;
 }
 .layout.flex-container.down {
   flex-direction: column;
@@ -301,10 +301,11 @@ p {
   background-color: var(--background-two);
 }
 .card.big > .container {
-  margin: 3rem;
+  padding: 3rem;
 }
 .card > .container {
-  margin: 2rem;
+  padding: 2rem;
+  height: 100%;
 }
 .card > .container h1,
 .card > .container h2 {
@@ -553,14 +554,14 @@ section#projects > .container {
   padding-top: 5rem;
 }
 section#projects > .container .card {
-  min-height: 75vh;
+  min-height: 25vh;
 }
 section#projects > .container #project-dash-dodge {
   background: var(--image-overlay), url("../../img/projects/dash-dodge/think-outside-the-box.jpg") no-repeat center center;
   background-size: cover;
 }
 section#projects > .container #project-simpliplan {
-  background: var(--image-overlay), url("../../img/projects/simpliplan/homework-page.png") no-repeat center top;
+  background: var(--image-overlay), url("../../img/projects/simpliplan/homework-page.png") no-repeat center 25%;
   background-size: cover;
 }
 

@@ -10,7 +10,7 @@ section#projects {
         padding-top: 5rem;
 
         .card {
-            min-height: 75vh;
+            min-height: 25vh;
         }
 
         #project-dash-dodge {
@@ -22,7 +22,7 @@ section#projects {
 
         #project-simpliplan {
             background: var(--image-overlay),
-                url('../../img/projects/simpliplan/homework-page.png') no-repeat center top;
+                url('../../img/projects/simpliplan/homework-page.png') no-repeat center 25%;
 
             background-size: cover;
         }

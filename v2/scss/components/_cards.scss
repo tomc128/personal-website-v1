@@ -8,11 +8,13 @@
     background-color: var(--background-two);
 
     &.big > .container {
-        margin: 3rem;
+        padding: 3rem;
     }
 
     > .container {
-        margin: 2rem;
+        padding: 2rem;
+
+        height: 100%;
 
         h1,
         h2 {

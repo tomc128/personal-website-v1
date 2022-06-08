@@ -19,7 +19,6 @@ body {
 section {
     > .container {
         margin: 0 4%;
-        min-height: 100vh;
 
         @include mixins.display-medium {
             margin: 0 8%;
