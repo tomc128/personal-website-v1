@@ -329,6 +329,35 @@ p {
   background-color: var(--background-four);
 }
 
+form {
+  padding: 2rem 0;
+}
+form input[type=text],
+form input[type=email],
+form textarea {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 1rem;
+  border: 1px solid var(--foreground);
+  border-radius: 0.25rem;
+  background-color: transparent;
+  color: var(--foreground);
+}
+form label {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+form input[type=submit] {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--foreground);
+  border: 1px solid var(--foreground);
+  cursor: pointer;
+}
+
 section#hero {
   background-color: var(--background-two);
 }
@@ -567,13 +596,27 @@ section#projects > .container #project-tomscript {
   background-size: cover;
 }
 
+section#contact {
+  background-color: var(--background-three);
+}
+section#contact > .container {
+  min-height: 100vh;
+  padding-top: 5rem;
+}
+
+#contact-separator {
+  height: 8rem;
+  color: var(--background-three);
+  background-color: var(--background-two);
+}
+
 footer {
   height: 25vh;
-  background-color: var(--background-three);
+  background-color: var(--background-two);
 }
 
 #footer-separator {
   height: 8rem;
-  color: var(--background-three);
-  background-color: var(--background-two);
+  color: var(--background-two);
+  background-color: var(--background-three);
 }

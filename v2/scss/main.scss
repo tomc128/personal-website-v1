@@ -15,11 +15,13 @@
 @use './components/layout';
 @use './components/cards';
 @use './components/chips';
+@use './components/forms';
 
 // Sections
 @use './sections/hero';
 @use './sections/about';
 @use './sections/tech';
 @use './sections/projects';
+@use './sections/contact';
 @use './sections/footer';
 

@@ -1,0 +1,18 @@
+@use '../utility/mixins';
+
+section#contact {
+    background-color: var(--background-three);
+
+    > .container {
+        min-height: 100vh;
+        padding-top: 5rem;
+    }
+}
+
+
+#contact-separator {
+    height: 8rem;
+
+    color: var(--background-three);
+    background-color: var(--background-two);
+}
