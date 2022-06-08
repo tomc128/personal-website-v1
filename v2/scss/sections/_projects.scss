@@ -26,5 +26,12 @@ section#projects {
 
             background-size: cover;
         }
+
+        #project-tomscript {
+            background: var(--image-overlay),
+                url('../../img/projects/tomscript/code-playground.png') no-repeat center center;
+
+            background-size: cover;
+        }
     }
 }
