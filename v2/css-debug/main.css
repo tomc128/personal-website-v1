@@ -241,7 +241,6 @@ p {
 .layout.stretch-items.xlarge-items {
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
 }
-
 .layout.fixed-items {
   width: 100%;
   display: flex;
@@ -249,7 +248,9 @@ p {
   flex-wrap: wrap;
   gap: 0.5rem;
 }
-
+.layout.fixed-items.bottom-to-top {
+  flex-wrap: wrap-reverse;
+}
 .layout.flex-container {
   display: flex;
   align-items: flex-start;
@@ -260,7 +261,6 @@ p {
 .layout.flex-container.across {
   flex-direction: row;
 }
-
 .layout.stretch-height {
   height: 100%;
 }
