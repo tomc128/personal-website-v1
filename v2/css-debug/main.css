@@ -63,6 +63,12 @@ input {
     --primary-colour-two: #f98e8e;
     --primary-colour-three: #ffc3c3;
     --image-overlay: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.85));
+    --blur-overlay: rgba(255, 255, 255, 0.5);
+  }
+  @supports ((-webkit-backdrop-filter: blur()) or (backdrop-filter: blur())) {
+    :root {
+      --blur-overlay: rgba(255, 255, 255, 0.25);
+    }
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -76,6 +82,12 @@ input {
     --primary-colour-two: #9d2727;
     --primary-colour-three: #531515;
     --image-overlay: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.65));
+    --blur-overlay: rgba(0, 0, 0, 0.5);
+  }
+  @supports ((-webkit-backdrop-filter: blur()) or (backdrop-filter: blur())) {
+    :root {
+      --blur-overlay: rgba(0, 0, 0, 0.25);
+    }
   }
 }
 
@@ -327,6 +339,15 @@ p {
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   background-color: var(--background-four);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.chip.blurred {
+  background-color: var(--blur-overlay);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+}
+.chip:hover {
+  transform: rotate(5deg);
 }
 
 form {

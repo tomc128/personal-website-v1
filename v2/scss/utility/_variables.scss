@@ -10,6 +10,8 @@ $dark-primary-colour: #eb5757;
 $dark-primary-colour-two: #9d2727; // generated from hsla(0, 60%, 48%, .65) on black bg
 $dark-primary-colour-three: #531515; // generated from hsla(0, 60%, 45%, .45) on black bg
 $dark-image-overlay: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.65));
+$dark-blur-overlay: rgba(0, 0, 0, 0.25);
+$dark-noblur-overlay: rgba(0, 0, 0, 0.5);
 
 // Light
 $light-foreground: #000;
@@ -21,6 +23,8 @@ $light-primary-colour: #eb5757;
 $light-primary-colour-two: #f98e8e;
 $light-primary-colour-three: #ffc3c3;
 $light-image-overlay: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.85));
+$light-blur-overlay: rgba(255, 255, 255, 0.25);
+$light-noblur-overlay: rgba(255, 255, 255, 0.5);
 
 // Spacing & Guides
 $decoration-height: 0.5rem;
@@ -38,6 +42,12 @@ $small-border-radius: 0.25rem;
         --primary-colour-two: #{$light-primary-colour-two};
         --primary-colour-three: #{$light-primary-colour-three};
         --image-overlay: #{$light-image-overlay};
+        
+        // Blur overlay if blurring is supported, else use the more opaque noblur overlay
+        --blur-overlay: #{$light-noblur-overlay};
+        @supports(backdrop-filter: blur()) {
+            --blur-overlay: #{$light-blur-overlay};
+        }
     }
     @include mixins.dark {
         --foreground: #{$dark-foreground};
@@ -49,6 +59,12 @@ $small-border-radius: 0.25rem;
         --primary-colour-two: #{$dark-primary-colour-two};
         --primary-colour-three: #{$dark-primary-colour-three};
         --image-overlay: #{$dark-image-overlay};
+
+        // Blur overlay if blurring is supported, else use the more opaque noblur overlay
+        --blur-overlay: #{$dark-noblur-overlay};
+        @supports(backdrop-filter: blur()) {
+            --blur-overlay: #{$dark-blur-overlay};
+        }
     }
 
     // spacing along side of the page, changing depending on mobile or desktop using clamp
