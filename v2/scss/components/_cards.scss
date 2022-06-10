@@ -7,24 +7,34 @@
 
     background-color: var(--background-two);
 
-    &.big > .container {
-        padding: 3rem;
+    &.big {
+        &.decorated > .container {
+            padding: 3rem;
+        }
+        > .container {
+            padding: 3rem 4rem; // Extra padding for undecorated cards only
+        }
+    }
+
+    &.decorated > .container {
+        padding: 2rem;
     }
 
     > .container {
-        padding: 2rem;
+        padding: 2rem 3rem; // Extra padding for undecorated cards only
 
         height: 100%;
 
         h1,
-        h2 {
-            margin: 1rem 0;
+        h2,
+        p {
+            margin-top: 1rem;
         }
     }
 
     &.raised {
         z-index: 10;
-        
+
         box-shadow: 0px 5.7px 4.5px rgba(0, 0, 0, 0.042), 0px 15.2px 12.5px rgba(0, 0, 0, 0.06),
             0px 34.6px 30.1px rgba(0, 0, 0, 0.078), 0px 100px 100px rgba(0, 0, 0, 0.12);
     }

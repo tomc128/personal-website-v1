@@ -206,7 +206,7 @@ section h2, footer h2 {
 }
 
 section h1, footer h1 {
-  margin: 1rem 0;
+  margin-top: 1rem;
 }
 section .title-decoration, footer .title-decoration {
   position: relative;
@@ -311,16 +311,23 @@ p {
   overflow: hidden;
   background-color: var(--background-two);
 }
-.card.big > .container {
+.card.big.decorated > .container {
   padding: 3rem;
 }
-.card > .container {
+.card.big > .container {
+  padding: 3rem 4rem;
+}
+.card.decorated > .container {
   padding: 2rem;
+}
+.card > .container {
+  padding: 2rem 3rem;
   height: 100%;
 }
 .card > .container h1,
-.card > .container h2 {
-  margin: 1rem 0;
+.card > .container h2,
+.card > .container p {
+  margin-top: 1rem;
 }
 .card.raised {
   z-index: 10;
