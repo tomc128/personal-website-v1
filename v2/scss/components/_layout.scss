@@ -28,20 +28,20 @@
         }
     }
 
-    &.flex-container {
-        display: flex;
-        align-items: flex-start;
-
-        &.down {
-            flex-direction: column;
-        }
-        &.across {
-            flex-direction: row;
-        }
-    }
-
     &.stretch-height {
         height: 100%;
+    }
+}
+
+.container.flex {
+    display: flex;
+    align-items: flex-start;
+
+    &.down {
+        flex-direction: column;
+    }
+    &.across {
+        flex-direction: row;
     }
 }
 

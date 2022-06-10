@@ -5,5 +5,22 @@ section#about {
     > .container {
         height: auto;
         margin-top: 3rem;
+
+        #about-graphic {
+            position: relative;
+            width: clamp(10rem, 15vw, 15rem);
+            color: var(--primary-colour);
+            align-self: center;
+
+            > .fade {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                background: radial-gradient(circle, transparent 25%, var(--background) 80%);
+            }
+
+            > svg {
+            }
+        }
     }
 }
